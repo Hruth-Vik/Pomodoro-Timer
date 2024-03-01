@@ -55,10 +55,14 @@ body{
 }
 
 
-#Start{
-padding: 10px;
+#third #Start{
+padding-top: 10px;
+padding-left: 18px;
+padding-right: 18px;
+padding-bottom: 10px;
 border-radius: 1rem;
 font-weight: bold;
 background-color: white;
-
-}
+ 
+}  
+  

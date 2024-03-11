@@ -71,7 +71,7 @@ section{
 
 .panel p{
   opacity: 0.8;
-  transition: 1s ease-in;
+  transition: 0.5s ease-in;
 }
 
 .panel p.active{
@@ -127,4 +127,18 @@ section{
   position: relative;
   top: -0.5rem;
   margin-inline: 1rem;
+}
+
+.controls{
+  margin-top: 3rem;
+}
+
+.controls button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.controls #reset{
+  display: none;
 }

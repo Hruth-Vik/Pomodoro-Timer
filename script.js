@@ -59,9 +59,36 @@ function start(){
 
 
 
-// let a=document.querySelector("#reset");
-// a.addEventListener("click",()=>{
-//     workTime=25;
-//     breakTime=5;
-//     seconds=59;
-// })
+let a=document.querySelector("#reset");
+a.addEventListener("click",()=>{
+    workTime=25;
+    breakTime=5;
+    seconds=59;
+    let timerFunction=()=>{
+        document.querySelector("#minutes").innerHTML=workMinutes;
+        document.querySelector("#seconds").innerHTML=seconds;
+        seconds=seconds-1;  
+        if(seconds===0)
+        {
+            workMinutes=workMinutes-1;
+            if(workMinutes===-1)
+            {
+                if(breakCount%2===0)
+                {
+                    workMinutes=breakMinutes;
+                    breakCount++;
+                    // changing the panel
+                    work.classList.remove("active");
+                    breakwork.classList.add("active");
+                }
+                else{
+                    workMinutes=workTime;
+                    breakCount++;
+                    breakwork.classList.remove("active");
+                    work.classList.add("active");
+                }
+            }
+            seconds=59;
+        }
+    }
+});

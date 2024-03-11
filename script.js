@@ -57,3 +57,11 @@ function start(){
     setInterval(timerFunction,1000);
 }
 
+
+
+// let a=document.querySelector("#reset");
+// a.addEventListener("click",()=>{
+//     workTime=25;
+//     breakTime=5;
+//     seconds=59;
+// })
